@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import {
-	Form,
-	FormGroup,
-	Col,
-	FormControl,
-	ControlLabel
+  Form,
+  FormGroup,
+  Col,
+  FormControl,
+  ControlLabel
 } from 'react-bootstrap';
 
 class CustomerForm extends Component {

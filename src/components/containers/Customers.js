@@ -29,11 +29,11 @@ class CustomersContainer extends Component {
   render() {
     return (
       <Customers
-				customers={this.props.customers}
-				createCustomer={this.props.createCustomer}
-				deleteCustomer={this.props.deleteCustomer}
-				editCustomer={this.props.editCustomer}
-			/>
+        customers={this.props.customers}
+        createCustomer={this.props.createCustomer}
+        deleteCustomer={this.props.deleteCustomer}
+        editCustomer={this.props.editCustomer}
+      />
     );
   }
 }

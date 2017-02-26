@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import {
-	Button,
-	PageHeader,
-	Table,
-	Glyphicon
+  Button,
+  PageHeader,
+  Table,
+  Glyphicon
 } from 'react-bootstrap';
 import ModalComponent from './ModalComponent';
 import ProductForm from './ProductForm';
@@ -72,38 +72,38 @@ class Products extends Component {
 
   render() {
     return (
-		<div className="products">
-			<PageHeader>Product list <Button onClick={() => this.open()}>Create</Button></PageHeader>
-			<ProductTable
-				products={this.props.products}
-				confirmDelete={this.confirmDelete}
-				open={this.open}
-			/>
-			{this.state.confirmDelete ?
-				<ModalComponent
-					showModal={this.state.showModal}
-					handleClose={this.close}
-					title={'Confirm delete'}
-					handleClick={() => this.delete(this.state.productId)}
-					titleButton={'Delete'}
-				>
-					Удалить?
-				</ModalComponent> :
-				<ModalComponent
-					showModal={this.state.showModal}
-					handleClose={this.close}
-					title={this.state.edit ? 'Edit product' :'Create product'}
-					handleClick={this.state.edit ? () => this.edit(this.state.productId) :this.create}
-					titleButton={this.state.edit ? 'Edit' :'Create'}
-				>
-				<ProductForm
-					name={this.state.name}
-					price={this.state.price}
-					handleChange={this.handleChange}
-				/>
-				</ModalComponent>
-			}
-		</div>
+    <div className="products">
+      <PageHeader>Product list <Button onClick={() => this.open()}>Create</Button></PageHeader>
+      <ProductTable
+        products={this.props.products}
+        confirmDelete={this.confirmDelete}
+        open={this.open}
+      />
+      {this.state.confirmDelete ?
+        <ModalComponent
+          showModal={this.state.showModal}
+          handleClose={this.close}
+          title={'Confirm delete'}
+          handleClick={() => this.delete(this.state.productId)}
+          titleButton={'Delete'}
+        >
+          Удалить?
+        </ModalComponent> :
+        <ModalComponent
+          showModal={this.state.showModal}
+          handleClose={this.close}
+          title={this.state.edit ? 'Edit product' :'Create product'}
+          handleClick={this.state.edit ? () => this.edit(this.state.productId) :this.create}
+          titleButton={this.state.edit ? 'Edit' :'Create'}
+        >
+          <ProductForm
+            name={this.state.name}
+            price={this.state.price}
+            handleChange={this.handleChange}
+          />
+        </ModalComponent>
+      }
+    </div>
     );
   }
 }

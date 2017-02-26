@@ -1,15 +1,14 @@
 import {
-	FETCH_PRODUCTS_SUCCESS,
-	FETCH_PRODUCTS_FAIL,
-	CREATE_PRODUCT_SUCCESS,
-	CREATE_PRODUCT_FAIL,
-	EDIT_PRODUCT_SUCCESS,
-	EDIT_PRODUCT_FAIL,
-	DELETE_PRODUCT_SUCCESS,
-	DELETE_PRODUCT_FAIL
-	} from './constants';
+  FETCH_PRODUCTS_SUCCESS,
+  FETCH_PRODUCTS_FAIL,
+  CREATE_PRODUCT_SUCCESS,
+  CREATE_PRODUCT_FAIL,
+  EDIT_PRODUCT_SUCCESS,
+  EDIT_PRODUCT_FAIL,
+  DELETE_PRODUCT_SUCCESS,
+  DELETE_PRODUCT_FAIL
+  } from './constants';
 import axios from 'axios';
-
 
 export function fetchProducts(data) {
   return {
@@ -42,10 +41,10 @@ export function handleDeleteProduct(data) {
 export function editProduct(id, name, price) {
   return dispatch => {
     return axios.put(`/api/products/${id}`, { name: name, price: price })
-		.then(function(response) {
+    .then(function(response) {
       dispatch(handleEditProduct(response.data));
     })
-		.catch(function (error) {
+    .catch(function (error) {
       dispatch(EDIT_PRODUCT_FAIL);
     });
   };
@@ -54,10 +53,10 @@ export function editProduct(id, name, price) {
 export function deleteProduct(id) {
   return dispatch => {
     return axios.delete(`/api/products/${id}`)
-		.then(function(response) {
+    .then(function(response) {
       dispatch(handleDeleteProduct(response.data.id));
     })
-		.catch(function (error) {
+    .catch(function (error) {
       dispatch(EDIT_PRODUCT_FAIL);
     });
   };
@@ -66,10 +65,10 @@ export function deleteProduct(id) {
 export function getProducts() {
   return dispatch => {
     return axios.get('/api/products')
-		.then(function(response) {
+    .then(function(response) {
       dispatch(fetchProducts(response.data));
     })
-		.catch(function (error) {
+    .catch(function (error) {
       dispatch(FETCH_PRODUCTS_FAIL);
     });
   };
@@ -78,10 +77,10 @@ export function getProducts() {
 export function createProduct(name, price) {
   return dispatch => {
     return axios.post('/api/products',{ name: name, price: price})
-		.then(function(response) {
+    .then(function(response) {
       dispatch(handleCreateProduct(response.data));
     })
-		.catch(function (error) {
+    .catch(function (error) {
       dispatch(CREATE_PRODUCT_FAIL);
     });
   };

@@ -19,7 +19,7 @@ const customersReducer = function(state = initialState, action) {
   case types.DELETE_CUSTOMER_SUCCESS:
     return Object.assign({}, state,
       { customersList: state.customersList.filter(
-					(customer) => {
+          (customer) => {
             return customer['id'] !== action.customerId;
           })
       });
@@ -32,7 +32,7 @@ const customersReducer = function(state = initialState, action) {
 
 const findEditCustomer = function(customers, customerEdit) {
   let index = customers.findIndex(
-		(customer, i) => {
+    (customer, i) => {
       if (customer.id === customerEdit.id) {
         return i;
       }

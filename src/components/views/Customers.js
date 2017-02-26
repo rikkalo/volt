@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import {
-	Button,
-	PageHeader,
-	Table,
-	Glyphicon
+  Button,
+  PageHeader,
+  Table,
+  Glyphicon
 } from 'react-bootstrap';
 import ModalComponent from './ModalComponent';
 import CustomerForm from './CustomerForm';
@@ -75,39 +75,39 @@ class Customers extends Component {
 
   render() {
     return (
-		<div className="customers">
-			<PageHeader>Customer list <Button onClick={() => this.open()}>Create</Button></PageHeader>
-			<CustomerTable
-				customers={this.props.customers}
-				confirmDelete={this.confirmDelete}
-				open={this.open}
-			/>
-			{this.state.confirmDelete ?
-				<ModalComponent
-					showModal={this.state.showModal}
-					handleClose={this.close}
-					title={'Confirm delete'}
-					handleClick={() => this.delete(this.state.customerId)}
-					titleButton={'Delete'}
-				>
-					Удалить?
-				</ModalComponent> :
-				<ModalComponent
-					showModal={this.state.showModal}
-					handleClose={this.close}
-					title={this.state.edit ? 'Edit customer' :'Create customer'}
-					handleClick={this.state.edit ? () => this.edit(this.state.customerId) :this.create}
-					titleButton={this.state.edit ? 'Edit' :'Create'}
-				>
-					<CustomerForm
-						name={this.state.name}
-						address={this.state.address}
-						phone={this.state.phone}
-						handleChange={this.handleChange}
-					/>
-				</ModalComponent>
-			}
-		</div>
+    <div className="customers">
+      <PageHeader>Customer list <Button onClick={() => this.open()}>Create</Button></PageHeader>
+      <CustomerTable
+        customers={this.props.customers}
+        confirmDelete={this.confirmDelete}
+        open={this.open}
+      />
+      {this.state.confirmDelete ?
+        <ModalComponent
+          showModal={this.state.showModal}
+          handleClose={this.close}
+          title={'Confirm delete'}
+          handleClick={() => this.delete(this.state.customerId)}
+          titleButton={'Delete'}
+        >
+          Удалить?
+        </ModalComponent> :
+        <ModalComponent
+          showModal={this.state.showModal}
+          handleClose={this.close}
+          title={this.state.edit ? 'Edit customer' :'Create customer'}
+          handleClick={this.state.edit ? () => this.edit(this.state.customerId) :this.create}
+          titleButton={this.state.edit ? 'Edit' :'Create'}
+        >
+          <CustomerForm
+            name={this.state.name}
+            address={this.state.address}
+            phone={this.state.phone}
+            handleChange={this.handleChange}
+          />
+        </ModalComponent>
+      }
+    </div>
     );
   }
 }

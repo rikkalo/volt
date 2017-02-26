@@ -19,7 +19,7 @@ const productsReducer = function(state = initialState, action) {
   case types.DELETE_PRODUCT_SUCCESS:
     return Object.assign({}, state,
       { productsList: state.productsList.filter(
-				(product) => {
+        (product) => {
           return product['id'] !== action.productId;
         })
       });
@@ -31,7 +31,7 @@ const productsReducer = function(state = initialState, action) {
 
 const findEditProduct = function(products, productEdit) {
   let index = products.findIndex(
-		(product, i) => {
+    (product, i) => {
       if (product.id === productEdit.id) {
         return i;
       }

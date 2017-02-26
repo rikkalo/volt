@@ -13,29 +13,29 @@ class CustomerTable extends Component {
 
   render() {
     return (
-			<Table>
-				<thead>
-					<tr>
-						<th>#</th>
-						<th>Name</th>
-						<th>Address</th>
-						<th>Phone</th>
-					</tr>
-				</thead>
-				<tbody>
-					{this.props.customers.map(customer => {
+      <Table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone</th>
+          </tr>
+        </thead>
+        <tbody>
+          {this.props.customers.map(customer => {
             return (
-							<tr key={customer.id} onClick={() => this.props.open(customer)}>
-								<td>{customer.id}</td>
-								<td>{customer.name}</td>
-								<td>{customer.address}</td>
-								<td>{customer.phone}</td>
-								<td><Glyphicon glyph='glyphicon glyphicon-trash' onClick={(e) => this.props.confirmDelete()}/></td>
-							</tr>
-             );
+              <tr key={customer.id} onClick={() => this.props.open(customer)}>
+                <td>{customer.id}</td>
+                <td>{customer.name}</td>
+                <td>{customer.address}</td>
+                <td>{customer.phone}</td>
+                <td><Glyphicon glyph='glyphicon glyphicon-trash' onClick={(e) => this.props.confirmDelete()}/></td>
+              </tr>
+            );
            })}
-				</tbody>
-			</Table>
+        </tbody>
+      </Table>
     );
   }
 }

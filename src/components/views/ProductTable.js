@@ -13,27 +13,27 @@ class ProductTable extends Component {
 
   render() {
     return (
-			<Table>
-				<thead>
-					<tr>
-						<th>#</th>
-						<th>Name</th>
-						<th>Price</th>
-					</tr>
-				</thead>
-				<tbody>
-					{this.props.products.map(product => {
+      <Table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          {this.props.products.map(product => {
             return (
-							<tr key={product.id} onClick={() => this.props.open(product)}>
-								<td>{product.id}</td>
-								<td>{product.name}</td>
-								<td>{product.price}</td>
-								<td><Glyphicon glyph='glyphicon glyphicon-trash' onClick={(e) => this.props.confirmDelete()} /></td>
-							</tr>
+              <tr key={product.id} onClick={() => this.props.open(product)}>
+                <td>{product.id}</td>
+                <td>{product.name}</td>
+                <td>{product.price}</td>
+                <td><Glyphicon glyph='glyphicon glyphicon-trash' onClick={(e) => this.props.confirmDelete()} /></td>
+              </tr>
             );
-           })}
-				</tbody>
-			</Table>
+          })}
+        </tbody>
+      </Table>
     );
   }
 }

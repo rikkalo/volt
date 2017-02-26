@@ -29,11 +29,11 @@ class ProductsContainer extends Component {
   render() {
     return (
       <Products
-				products={this.props.products}
-				createProduct={this.props.createProduct}
-				deleteProduct={this.props.deleteProduct}
-				editProduct={this.props.editProduct}
-			/>
+        products={this.props.products}
+        createProduct={this.props.createProduct}
+        deleteProduct={this.props.deleteProduct}
+        editProduct={this.props.editProduct}
+      />
     );
   }
 }

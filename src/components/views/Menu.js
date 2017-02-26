@@ -7,18 +7,18 @@ class Menu extends Component {
   render() {
     return (
       <Navbar>
-				<CenterLayout>
-					<Navbar.Header>
-						<Navbar.Brand>
-							<a href="/products">Invoice app</a>
-						</Navbar.Brand>
-					</Navbar.Header>
-					<Nav>
-						<NavItem eventKey={1} href="/products">Products</NavItem>
-						<NavItem eventKey={2} href="/customers">Customers</NavItem>
-					</Nav>
-				</CenterLayout>
-			</Navbar>
+        <CenterLayout>
+          <Navbar.Header>
+            <Navbar.Brand>
+              <a href="/products">Invoice app</a>
+            </Navbar.Brand>
+          </Navbar.Header>
+          <Nav>
+            <NavItem eventKey={1} href="/products">Products</NavItem>
+            <NavItem eventKey={2} href="/customers">Customers</NavItem>
+          </Nav>
+        </CenterLayout>
+      </Navbar>
     );
   }
 }
