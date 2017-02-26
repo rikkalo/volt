@@ -1,3 +1,3 @@
-Run app
-  webpack
-  npm start
+Run app:
+webpack
+npm start
