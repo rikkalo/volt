@@ -1,11 +1,11 @@
-import React, { Component } from "react";
-import { Link } from "react-router";
-import { Navbar, Nav, NavItem } from "react-bootstrap";
-import CenterLayout from "../../components/layouts/CenterLayout";
+import React, { Component } from 'react';
+import { Link } from 'react-router';
+import { Navbar, Nav, NavItem } from 'react-bootstrap';
+import CenterLayout from '../../components/layouts/CenterLayout';
 
 class Menu extends Component {
-	render() {
-		return (
+  render() {
+    return (
       <Navbar>
 				<CenterLayout>
 					<Navbar.Header>
@@ -19,8 +19,8 @@ class Menu extends Component {
 					</Nav>
 				</CenterLayout>
 			</Navbar>
-		);
-	}
+    );
+  }
 }
 
 export default Menu;

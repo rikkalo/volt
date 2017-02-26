@@ -1,18 +1,18 @@
-import React, { Component } from "react";
-import { Table, Glyphicon } from "react-bootstrap";
+import React, { Component } from 'react';
+import { Table, Glyphicon } from 'react-bootstrap';
 
 class CustomerTable extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			showModal: false,
-			edit: false,
-			confirmDelete: false
-		};
-	}
+  constructor(props) {
+    super(props);
+    this.state = {
+      showModal: false,
+      edit: false,
+      confirmDelete: false
+    };
+  }
 
-	render() {
-		return (
+  render() {
+    return (
 			<Table>
 				<thead>
 					<tr>
@@ -24,7 +24,7 @@ class CustomerTable extends Component {
 				</thead>
 				<tbody>
 					{this.props.customers.map(customer => {
-						return (
+            return (
 							<tr key={customer.id} onClick={() => this.props.open(customer)}>
 								<td>{customer.id}</td>
 								<td>{customer.name}</td>
@@ -32,12 +32,12 @@ class CustomerTable extends Component {
 								<td>{customer.phone}</td>
 								<td><Glyphicon glyph='glyphicon glyphicon-trash' onClick={(e) => this.props.confirmDelete()}/></td>
 							</tr>
-						);
-					})}
+             );
+           })}
 				</tbody>
 			</Table>
-		);
-	}
+    );
+  }
 }
 
 export default CustomerTable;

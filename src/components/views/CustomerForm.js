@@ -1,22 +1,22 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import {
 	Form,
 	FormGroup,
 	Col,
 	FormControl,
 	ControlLabel
-} from "react-bootstrap";
+} from 'react-bootstrap';
 
 class CustomerForm extends Component {
-	render() {
-		return (
+  render() {
+    return (
     <Form horizontal>
       <FormGroup controlId="customer_name">
         <Col componentClass={ControlLabel} sm={2}>
           Name
         </Col>
         <Col sm={10}>
-          <FormControl type="customer_name" value={this.props.name} onChange={(e) => this.props.handleChange("name", e)} placeholder="Name" />
+          <FormControl type="customer_name" value={this.props.name} onChange={(e) => this.props.handleChange('name', e)} placeholder="Name" />
         </Col>
       </FormGroup>
 
@@ -25,7 +25,7 @@ class CustomerForm extends Component {
           Address
         </Col>
         <Col sm={10}>
-          <FormControl type="customer_address"  value={this.props.address} onChange={(e) => this.props.handleChange("address", e)} placeholder="Address" />
+          <FormControl type="customer_address"  value={this.props.address} onChange={(e) => this.props.handleChange('address', e)} placeholder="Address" />
         </Col>
       </FormGroup>
 
@@ -34,12 +34,12 @@ class CustomerForm extends Component {
           Phone
         </Col>
         <Col sm={10}>
-          <FormControl type="customer_phone" value={this.props.phone} onChange={(e) => this.props.handleChange("phone", e)} placeholder="Phone" />
+          <FormControl type="customer_phone" value={this.props.phone} onChange={(e) => this.props.handleChange('phone', e)} placeholder="Phone" />
         </Col>
       </FormGroup>
     </Form>
-		);
-	}
+    );
+  }
 }
 
 export default CustomerForm;

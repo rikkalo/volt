@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import CenterLayout from "./CenterLayout";
-import Menu from "../../components/views/Menu";
+import React, { Component } from 'react';
+import CenterLayout from './CenterLayout';
+import Menu from '../../components/views/Menu';
 
 class MainLayout extends Component {
-	render() {
-		return (
+  render() {
+    return (
 		<div className="main">
 			<Menu />
 			<main>
@@ -13,8 +13,8 @@ class MainLayout extends Component {
 				</CenterLayout>
 			</main>
 		</div>
-		);
-	}
+    );
+  }
 }
 
 export default MainLayout;

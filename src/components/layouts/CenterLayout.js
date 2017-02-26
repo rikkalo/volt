@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import { Grid, Row, Col} from "react-bootstrap";
+import React, { Component } from 'react';
+import { Grid, Row, Col} from 'react-bootstrap';
 
 class CenterLayout extends Component {
-	render() {
-		return (
+  render() {
+    return (
       <Grid>
         <Row className="show-grid">
           <Col xs={1} md={1}></Col>
@@ -11,8 +11,8 @@ class CenterLayout extends Component {
           <Col xs={1} md={1}></Col>
         </Row>
       </Grid>
-		);
-	}
+    );
+  }
 }
 
 export default CenterLayout;
